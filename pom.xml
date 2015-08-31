@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>simpro</name>
+    <name>simple-project</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -22,4 +22,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.zanata</groupId>
+                <artifactId>zanata-maven-plugin</artifactId>
+                <version>3.7.4</version>
+                <configuration>
+                    <userConfig>src/main/resources/zanata.ini</userConfig>
+                    <projectConfig>src/main/resources/zanata.xml</projectConfig>
+                    <url>http://localhost:8080/zanata/</url>
+                    <!--<srcDir>src/main/java</srcDir>-->
+                    <!--<transDir>src/main/resources/</transDir>-->
+                    <includes>src/main/resources/messages.properties</includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
