@@ -29,11 +29,11 @@
                 <artifactId>zanata-maven-plugin</artifactId>
                 <version>3.7.4</version>
                 <configuration>
-                    <userConfig>src/main/resources/zanata.ini</userConfig>
-                    <projectConfig>src/main/resources/zanata.xml</projectConfig>
                     <url>http://localhost:8080/zanata/</url>
-                    <!--<srcDir>src/main/java</srcDir>-->
-                    <!--<transDir>src/main/resources/</transDir>-->
+                    <projectVersion>1.0</projectVersion>
+                    <projectType>utf8properties</projectType>
+                    <userConfig>src/main/config/zanata.ini</userConfig>
+                    <projectConfig>src/main/config/zanata.xml</projectConfig>
                     <includes>src/main/resources/messages.properties</includes>
                 </configuration>
             </plugin>
